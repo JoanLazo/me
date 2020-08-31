@@ -31,6 +31,7 @@ export class HomeComponent implements OnInit {
     this.monedas = 0;
     $(".my_audio").trigger('load');
     $(".moneda").trigger('load');
+    $(".game_over").trigger('load');
   }
   play_audio(task, valor) {
     if (task == 'play') {
@@ -59,6 +60,11 @@ export class HomeComponent implements OnInit {
          $(".moneda").trigger('pause');
          $(".moneda").prop("currentTime",0);
     }
+    setTimeout(function(){
+      if (this.monedas <= 30) {
+        $(".game_over").trigger('play');
+      }
+      }, 15000);
   }
   scrollFunction() {
     const mybutton = document.getElementById('scroll');
