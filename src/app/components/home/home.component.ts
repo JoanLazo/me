@@ -14,6 +14,9 @@ export class HomeComponent implements OnInit {
   skill;
   seguir;
   monedas;
+  heart: boolean = false;
+  heart2: boolean = false;
+  heart3: boolean = false;
   primero:boolean = false;
   b:boolean = false;
   c:boolean = false;
@@ -46,6 +49,10 @@ export class HomeComponent implements OnInit {
          $(".my_audio").trigger('pause');
          $(".my_audio").prop("currentTime",0);
     }
+     this.heart3 = false;
+     this.heart2 = false;
+     this.heart = false;
+  
   }
   play_audio2(task, valor) {
     if (task == 'play') {
@@ -60,6 +67,23 @@ export class HomeComponent implements OnInit {
          $(".moneda").trigger('pause');
          $(".moneda").prop("currentTime",0);
     }
+    setTimeout(() => {
+      if (this.progreso <= 40) {
+        this.heart3 = true;
+      }
+    }, 20000);
+
+    setTimeout(() => {
+      if (this.progreso <= 40) {
+        this.heart2 = true;
+      }
+    }, 30000);
+
+    setTimeout(() => {
+      if (this.progreso <= 40) {
+        this.heart = true;
+      }
+    }, 40000);
     setTimeout(() => {
       if (this.monedas <= 30) {
         $(".moneda").trigger('pause');

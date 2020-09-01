@@ -63,9 +63,9 @@
             <div class="col-6" >
               <p>
                 <i class="nes-mario is-medium mr-2"></i>
-                <i class="nes-icon is-medium heart"></i>
-                <i class="nes-icon is-medium heart"></i>
-                <i class="nes-icon is-medium heart"></i>
+                <i class="nes-icon is-medium heart" [ngClass]="{ 'is-transparent': this.heart == true}"></i>
+                <i class="nes-icon is-medium heart" [ngClass]="{ 'is-transparent': this.heart2 == true}"></i>
+                <i class="nes-icon is-medium heart"[ngClass]="{ 'is-transparent': this.heart3 == true}"></i>
               </p>
             </div>
             <div class="col-6 text-right">
