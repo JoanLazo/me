@@ -60,12 +60,16 @@ export class HomeComponent implements OnInit {
          $(".moneda").trigger('pause');
          $(".moneda").prop("currentTime",0);
     }
-    setTimeout(function(){
+    setTimeout(() => {
       if (this.monedas <= 30) {
+        $(".moneda").trigger('pause');
+        $(".moneda").prop("currentTime",0);
         $(".game_over").trigger('play');
       }
-      }, 15000);
+  }, 40000);
   }
+  
+
   scrollFunction() {
     const mybutton = document.getElementById('scroll');
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {

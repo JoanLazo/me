@@ -47,20 +47,20 @@
           <section class="nes-container">
             <div class="d-flex flex-lg-row flex-column">
               <div class="col-12 col-lg-6 text-center">
-                <button type="button" class="nes-btn is-primary">Descargar CV</button>
+                <a class="nes-btn is-primary" href="https://drive.google.com/open?id=140Amj7Wb5f4Ob7X8gVMbYLMHhjxhnc7l" target="_blank" style="color: white">Descargar CV</a>
               </div>
               <div class="col-12 col-lg-6 text-center">
-                <button type="button" class="nes-btn is-success">Continuar</button>
+                <a class="nes-btn is-success" href="#mario" style="color: white">Continuar</a>
               </div>
             </div>
           </section>
         </div>
         <!--puntaje mario -->
-        <div class="pt-5 col-lg-10 m-auto">
-          <progress class="nes-progress" [ngClass]="{'is-error' : progreso < 30 , 'is-warning' : progreso < 40,'is-primary' : progreso < 80, 'is-success' : progreso < 100, 'is-success' : progreso < 200}" value="{{progreso}}" max="100"></progress>
+        <div  class="pt-5 col-lg-10 m-auto">
+          <progress id="mario" class="nes-progress" [ngClass]="{'is-error' : progreso < 30 , 'is-warning' : progreso < 40,'is-primary' : progreso < 80, 'is-success' : progreso < 100, 'is-success' : progreso < 200}" value="{{progreso}}" max="100"></progress>
           <section class="icon-list d-flex flex-row pt-3">
             <!-- Copyright Nintendo -->
-            <div class="col-6">
+            <div class="col-6" >
               <p>
                 <i class="nes-mario is-medium mr-2"></i>
                 <i class="nes-icon is-medium heart"></i>
@@ -82,7 +82,7 @@
               <source src="../assets/sound/mario-coin.mp3" type="audio/mpeg">
             </audio>
             <audio class="game_over" controls preload="none">
-              <source src="../assets/sound/gamer-over.mp3" type="audio/mpeg">
+              <source src="../assets/sound/mario-bros-game-over.mp3" type="audio/mpeg">
             </audio>
           </section>
         </div>
@@ -92,32 +92,32 @@
             <p class="title">Proyectos</p>
           <div class="card-group">
             <div class="card mr-2 text-white bg-dark">
-              <img src="..." class="card-img-top" alt="...">
+              <img src="../assets/images/fitlab.png" style="height: 150px;" class="card-img-top" alt="Fitlab">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <div>
-                  <i class="snes-jp-logo click" (click)="play_audio2('play', 1)"></i>
+                <h5 class="card-title text-center">Fitlab</h5>
+                <p class="card-text">Ecommerce de productos dedicados a la salud y el deporte, realizado con la plataforma de Magento, php y less.</p>
+                <div (click)="play_audio2('play', 1)">
+                  <a href="https://fitlab.com.pa/" target="_blank" style="font-size: 13px"><i class="snes-jp-logo" ></i> Ver Web</a>  
                 </div>
               </div>
             </div>
             <div class="card mr-2 text-white bg-dark">
-              <img src="..." class="card-img-top" alt="...">
+              <img src="../assets/images/lol.jpg" style="height: 150px;" class="card-img-top" alt="Lol">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                <div>
-                  <i class="snes-jp-logo click" (click)="play_audio2('play', 1)"></i>
+                <h5 class="card-title text-center">Data Lovers</h5>
+                <p class="card-text">Web que consume un api con el tema de League of Leagues, juego de rol en equipo,donde los fans podra ver información sobre sus heroes.</p>
+                <div (click)="play_audio2('play', 1)">
+                  <a href="https://joanlazo.github.io/lim-2018-11-bc-core-am-data-lovers/src/"  target="_blank" style="font-size: 13px"><i class="snes-jp-logo" ></i> Ver Web</a>
                 </div>
               </div>
             </div>
             <div class="card text-white bg-dark">
-              <img src="..." class="card-img-top" alt="...">
+              <img src="../assets/images/mommy.png" style="height: 150px;" class="card-img-top" alt="Mommys">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                <div>
-                  <i class="snes-jp-logo click" (click)="play_audio2('play', 1)"></i>
+                <h5 class="card-title text-center">Mommy's Love</h5>
+                <p class="card-text">Red social de apoyo entre madres primerizas donde podrán interactuar publicando sus experiencias, editando y reaccionando con divertidos emoticones.</p>
+                <div (click)="play_audio2('play', 1)">
+                  <a href="https://joanlazo.github.io/LIM008-social-network/src/index.html"  target="_blank" style="font-size: 13px"><i class="snes-jp-logo" ></i> Ver Web</a>
                 </div>
               </div>
             </div>
