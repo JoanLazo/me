@@ -57,7 +57,7 @@
         </div>
         <!--puntaje mario -->
         <div  class="pt-5 col-lg-10 m-auto">
-          <progress id="mario" class="nes-progress" [ngClass]="{'is-error' : progreso < 30 , 'is-warning' : progreso < 40,'is-primary' : progreso < 80, 'is-success' : progreso < 100, 'is-success' : progreso < 200}" value="{{progreso}}" max="100"></progress>
+          <progress id="mario" class="nes-progress" [ngClass]="{'is-error' : progreso < 30 , 'is-warning' : progreso < 40,'is-primary' : progreso < 80,'is-success' : progreso < 200}" value="{{progreso}}" max="100"></progress>
           <section class="icon-list d-flex flex-row pt-3">
             <!-- Copyright Nintendo -->
             <div class="col-6" >
@@ -97,7 +97,7 @@
                 <h5 class="card-title text-center">Fitlab</h5>
                 <p class="card-text">Ecommerce de productos dedicados a la salud y el deporte, realizado con la plataforma de Magento, php y less.</p>
                 <div (click)="play_audio2('play', 1)">
-                  <a href="https://fitlab.com.pa/" target="_blank" style="font-size: 13px"><i class="snes-jp-logo" ></i> Ver Web</a>  
+                  <a href="https://fitlab.com.pa/" target="_blank" style="font-size: 13px"><i class="snes-jp-logo" ></i> Ver Web</a>
                 </div>
               </div>
             </div>
@@ -154,42 +154,21 @@
                     <span class="nes-text is-dark" [ngClass]="{ 'is-success': d === true}" >Magento</span>
                   </div>
                 </div>
-                <!-- <div class="d-flex flex-column">
-                  <img id="5" src="../assets/images/Npm-logo.svg" alt="npm" class="img-small">
-                  <div class="border-black" (click)="play_audio2('play', 1)">
-                    <span class="nes-text is-dark" [ngClass]="{ 'is-success': e === true}" (click)="e = !e">Npm</span>
-                  </div>
-                </div> -->
+
                 <div class="d-flex flex-column" (click)="play_audio2('play', 1)">
                   <img id="6" src="../assets/images/html-5.png" alt="html 5" class="img-small border-black" (click)="f = !f">
                   <div >
                     <span class="nes-text is-dark" [ngClass]="{ 'is-success': f === true}" >Html</span>
                   </div>
                 </div>
-                <!-- <div class="d-flex flex-column">
-                  <img id="7" src="../assets/images/react-icon.jpg" alt="react" class="img-small">
-                  <div class="border-black" (click)="play_audio2('play', 1)">
-                    <span class="nes-text is-dark" [ngClass]="{ 'is-success': g === true}" (click)="g = !g">React</span>
-                  </div>
-                </div> -->
-                <!-- <div class="d-flex flex-column">
-                  <img id="8" src="../assets/images/wordpress-icon.png" alt="wordpress" class="img-small">
-                  <div class="border-black" (click)="play_audio2('play', 1)">
-                    <span class="nes-text is-dark" [ngClass]="{ 'is-success': h === true}" (click)="h = !h">Wordpress</span>
-                  </div>
-                </div> -->
+
                 <div class="d-flex flex-column" (click)="play_audio2('play', 1)">
                   <img id="9" src="../assets/images/angular.png" alt="Angular" class="img-small border-black" (click)="i = !i">
                   <div >
                     <span class="nes-text is-dark" [ngClass]="{ 'is-success': i === true}" >Angular</span>
                   </div>
                 </div>
-                 <!-- <div>
-                  <img id="10" src="../assets/images/git-icon.png" alt="git" class="img-small">
-                  <div class="border-black"(click)="play_audio2('play' ,1)">
-                    <span class="nes-text is-dark" [ngClass]="{ 'is-success': j === true}" (click)="j = !j">Git</span>
-                  </div>
-                </div> -->
+
                 <div class="d-flex flex-column" (click)="play_audio2('play', 1)">
                   <img id="11" src="../assets/images/prestashop.png" alt="prestashop" class="img-small border-black" (click)="k = !k">
                   <div>
