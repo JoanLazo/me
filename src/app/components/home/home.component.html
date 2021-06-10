@@ -1,261 +1,520 @@
-
-    <div class="container">
-      <main>
-        <div class="col-lg-10 pt-5 m-auto">
-          <section class="nes-container with-title is-centered">
-            <p class="title">Iniciando el juego</p>
-         <!-- Balloon 'is-dark'  -->
-            <section class="nes-container is-dark d-none d-lg-block">
-              <section class="message-list">
-                  <section class="message -left">
-                    <img src="assets/images/honguito.png" alt="honguito" class="nes-bcrikko">
-                    <!-- Balloon -->
-                    <div class="nes-balloon from-left is-dark">
-                      <div class="css-typing">
-                        <p>¡ Hola visitante!</p>
-                      </div>
-                    </div>
-                  </section>
-
-                  <section class="message -right">
-                    <!-- Balloon -->
-                    <div class="nes-balloon from-right is-dark">
-                      <div class="css-typing2">
-                        <p>Comencemos esta aventura juntos.</p>
-                      </div>
-                    </div>
-                    <img src="assets/images/honguito.png" alt="honguito" class="nes-bcrikko">
-                  </section>
-                </section>
-              </section>
-              <!-- mobile -->
-              <section class="nes-container is-dark d-block d-lg-none">
-                <section class="message-list">
-                    <section class="message-left">
-                      <!-- Balloon -->
-                      <div class="nes-balloon from-left is-dark">
-                          <p class="text-m">¡ Hola visitante!</p>
-                      </div>
-                      <i class="nes-bcrikko"></i>
-                    </section>
-                  </section>
-                </section>
+<div class="container">
+  <main>
+    <div class="col-lg-10 pt-5 m-auto">
+      <section class="nes-container with-title is-centered">
+        <p class="title">Iniciando el juego</p>
+        <!-- Balloon 'is-dark'  -->
+        <section class="nes-container is-dark d-none d-lg-block">
+          <section class="message-list">
+            <section class="message -left">
+              <img
+                src="./assets/images/honguito.png"
+                alt="honguito"
+                class="nes-bcrikko"
+              />
+              <!-- Balloon -->
+              <div class="nes-balloon from-left is-dark">
+                <div class="css-typing">
+                  <p>¡ Hola visitante!</p>
+                </div>
+              </div>
             </section>
-        </div>
-        <!-- zona cv -->
-        <div class=" col-lg-10 m-auto pt-3">
-          <section class="nes-container">
-            <div class="d-flex flex-lg-row flex-column">
-              <div class="col-12 col-lg-6 text-center mb-3 mb-lg-0">
-                <a class="nes-btn is-primary text-14" href="https://drive.google.com/file/d/1fhTSdG3O_HLnxB1ebzioxAiapSzfYfAx/view?usp=sharing" target="_blank" style="color: white">Descargar CV</a>
+
+            <section class="message -right">
+              <!-- Balloon -->
+              <div class="nes-balloon from-right is-dark">
+                <div class="css-typing2">
+                  <p>Comencemos esta aventura juntos.</p>
+                </div>
               </div>
-              <div class="col-12 col-lg-6 text-center">
-                <a class="nes-btn is-success" href="#mario" style="color: white">Continuar</a>
-              </div>
-            </div>
+              <img
+                src="./assets/images/honguito.png"
+                alt="honguito"
+                class="nes-bcrikko"
+              />
+            </section>
           </section>
+        </section>
+        <!-- mobile -->
+        <section class="nes-container is-dark d-block d-lg-none">
+          <section class="message-list">
+            <section class="message-left">
+              <!-- Balloon -->
+              <div class="nes-balloon from-left is-dark">
+                <p class="text-m">¡ Hola visitante!</p>
+              </div>
+              <i class="nes-bcrikko"></i>
+            </section>
+          </section>
+        </section>
+      </section>
+    </div>
+    <!-- zona cv -->
+    <div class="col-lg-10 m-auto pt-3">
+      <section class="nes-container">
+        <div class="d-flex flex-lg-row flex-column">
+          <div class="col-12 col-lg-6 text-center mb-3 mb-lg-0">
+            <a
+              class="nes-btn is-primary text-14"
+              href="https://drive.google.com/file/d/1fhTSdG3O_HLnxB1ebzioxAiapSzfYfAx/view?usp=sharing"
+              target="_blank"
+              style="color: white"
+              >Descargar CV</a
+            >
+          </div>
+          <div class="col-12 col-lg-6 text-center">
+            <a class="nes-btn is-success" href="#mario" style="color: white"
+              >Continuar</a
+            >
+          </div>
         </div>
-        <!--puntaje mario -->
-        <div  class="pt-5 col-lg-10 m-auto">
-          <progress id="mario" class="nes-progress" [ngClass]="{'is-error' : progreso < 30 , 'is-warning' : progreso < 40,'is-primary' : progreso < 80,'is-success' : progreso < 200}" value="{{progreso}}" max="100"></progress>
-          <section class="icon-list d-flex flex-row pt-3">
-            <!-- Copyright Nintendo -->
-            <div class="col-6" >
-              <p>
-                <i class="nes-mario is-medium mr-2"></i>
-                <i class="nes-icon is-medium heart" [ngClass]="{ 'is-transparent': this.heart == true}"></i>
-                <i class="nes-icon is-medium heart" [ngClass]="{ 'is-transparent': this.heart2 == true}"></i>
-                <i class="nes-icon is-medium heart"[ngClass]="{ 'is-transparent': this.heart3 == true}"></i>
+      </section>
+    </div>
+    <!--puntaje mario -->
+    <div class="pt-5 col-lg-10 m-auto">
+      <progress
+        id="mario"
+        class="nes-progress"
+        [ngClass]="{
+          'is-error': progreso < 30,
+          'is-warning': progreso < 40,
+          'is-primary': progreso < 80,
+          'is-success': progreso < 200
+        }"
+        value="{{ progreso }}"
+        max="100"
+      ></progress>
+      <section class="icon-list d-flex flex-row pt-3">
+        <!-- Copyright Nintendo -->
+        <div class="col-6">
+          <p>
+            <i class="nes-mario is-medium mr-2"></i>
+            <i
+              class="nes-icon is-medium heart"
+              [ngClass]="{ 'is-transparent': this.heart == true }"
+            ></i>
+            <i
+              class="nes-icon is-medium heart"
+              [ngClass]="{ 'is-transparent': this.heart2 == true }"
+            ></i>
+            <i
+              class="nes-icon is-medium heart"
+              [ngClass]="{ 'is-transparent': this.heart3 == true }"
+            ></i>
+          </p>
+        </div>
+        <div class="col-6 text-right">
+          <p>
+            Monedas: {{ monedas
+            }}<span><i class="nes-icon coin is-small"></i></span>
+          </p>
+          <div class="col-12 d-flex flex-lg-row flex-column">
+            <button
+              class="nes-btn mr-lg-3 mb-3 mb-lg-1"
+              (click)="play_audio('play', 10)"
+            >
+              PLAY
+            </button>
+            <button class="nes-btn is-warning" (click)="play_audio('stop', 10)">
+              STOP
+            </button>
+          </div>
+        </div>
+        <audio class="my_audio" controls preload="none">
+          <source
+            src="./assets/sound/ringtones-super-mario-bros.mp3"
+            type="audio/mpeg"
+          />
+        </audio>
+        <audio class="moneda" controls preload="none">
+          <source src="./assets/sound/mario-coin.mp3" type="audio/mpeg" />
+        </audio>
+        <audio class="game_over" controls preload="none">
+          <source
+            src="./assets/sound/mario-bros-game-over.mp3"
+            type="audio/mpeg"
+          />
+        </audio>
+      </section>
+    </div>
+    <!-- proyectos -->
+    <div id="proyectos" class="pt-5 col-lg-10 m-auto pb-2">
+      <section class="nes-container with-title is-centered">
+        <p class="title">Proyectos</p>
+        <div class="card-group">
+          <div class="card mr-2 text-white bg-dark">
+            <img
+              src="./assets/images/fitlab.png"
+              style="height: 150px"
+              class="card-img-top"
+              alt="Fitlab"
+            />
+            <div class="card-body">
+              <h5 class="card-title text-center">Fitlab</h5>
+              <p class="card-text">
+                Ecommerce de productos dedicados a la salud y el deporte,
+                realizado con la plataforma de Magento, php y less.
               </p>
-            </div>
-            <div class="col-6 text-right">
-              <p >Monedas: {{monedas}}<span><i class="nes-icon coin is-small"></i></span></p>
-              <div class="col-12 d-flex flex-lg-row flex-column">
-                <button  class="nes-btn mr-lg-3 mb-3 mb-lg-1" (click)="play_audio('play', 10)">PLAY</button>
-                <button  class="nes-btn is-warning" (click)="play_audio('stop', 10)">STOP</button>
-              </div>
-            </div>
-            <audio class="my_audio" controls preload="none">
-              <source src="assets/sound/ringtones-super-mario-bros.mp3" type="audio/mpeg">
-            </audio>
-            <audio class="moneda" controls preload="none">
-              <source src="assets/sound/mario-coin.mp3" type="audio/mpeg">
-            </audio>
-            <audio class="game_over" controls preload="none">
-              <source src="assets/sound/mario-bros-game-over.mp3" type="audio/mpeg">
-            </audio>
-          </section>
-        </div>
-        <!-- proyectos -->
-        <div id="proyectos" class="pt-5 col-lg-10 m-auto pb-2">
-          <section class="nes-container with-title is-centered">
-            <p class="title">Proyectos</p>
-          <div class="card-group">
-            <div class="card mr-2 text-white bg-dark">
-              <img src="assets/images/fitlab.png" style="height: 150px;" class="card-img-top" alt="Fitlab">
-              <div class="card-body">
-                <h5 class="card-title text-center">Fitlab</h5>
-                <p class="card-text">Ecommerce de productos dedicados a la salud y el deporte, realizado con la plataforma de Magento, php y less.</p>
-                <div (click)="play_audio2('play', 1)">
-                  <a href="https://fitlab.com.pa/" target="_blank" style="font-size: 13px"><i class="snes-jp-logo" ></i> Ver Web</a>
-                </div>
-              </div>
-            </div>
-            <div class="card mr-2 text-white bg-dark">
-              <img src="assets/images/lol.jpg" style="height: 150px;" class="card-img-top" alt="Lol">
-              <div class="card-body">
-                <h5 class="card-title text-center">Data Lovers</h5>
-                <p class="card-text">Web que consume un api con el tema de League of Leagues, juego de rol en equipo,donde los fans podra ver información sobre sus heroes.</p>
-                <div (click)="play_audio2('play', 1)">
-                  <a href="https://joanlazo.github.io/lim-2018-11-bc-core-am-data-lovers/src/"  target="_blank" style="font-size: 13px"><i class="snes-jp-logo" ></i> Ver Web</a>
-                </div>
-              </div>
-            </div>
-            <div class="card text-white bg-dark">
-              <img src="assets/images/mommy.png" style="height: 150px;" class="card-img-top" alt="Mommys">
-              <div class="card-body">
-                <h5 class="card-title text-center">Mommy's Love</h5>
-                <p class="card-text">Red social de madres primerizas, interactua, publica tus experiencias, edita y reacciona con divertidos emoticones.</p>
-                <div (click)="play_audio2('play', 1)">
-                  <a href="https://joanlazo.github.io/LIM008-social-network/src/index.html"  target="_blank" style="font-size: 13px"><i class="snes-jp-logo" ></i> Ver Web</a>
-                </div>
+              <div (click)="play_audio2('play', 1)">
+                <a
+                  href="https://fitlab.com.pa/"
+                  target="_blank"
+                  style="font-size: 13px"
+                  ><i class="snes-jp-logo"></i> Ver Web</a
+                >
               </div>
             </div>
           </div>
-        </section>
-        </div>
-
-        <!-- skill -->
-        <div id="skill" class="pt-5 col-lg-10 m-auto pb-2 d-none d-lg-block">
-          <section class="nes-container with-title is-centered ">
-            <p class="title">Skills</p>
-              <div class="d-flex justify-content-center align-items-center flex-wrap mb-5">
-                <div class="d-flex flex-column" (click)="play_audio2('play', 1)">
-                  <img id="1" src="assets/images/bootstrap.png" alt="Bootstrap" class="img-small border-black" (click)="primero = !primero">
-                  <div >
-                    <span class="nes-text is-dark" [ngClass]="{ 'is-success': primero === true}"  >Bootstrap</span>
-                  </div>
-                </div>
-                <div class="d-flex flex-column" (click)="play_audio2('play', 1)">
-                  <img id="2" src="assets/images/firebase.png" alt="Firebase" class="img-small border-black" (click)="b = !b">
-                  <div >
-                    <span class="nes-text is-dark" [ngClass]="{ 'is-success': b === true}" >Firebase</span>
-                  </div>
-                </div>
-                <div  class="d-flex flex-column" (click)="play_audio2('play', 1)">
-                  <img id="3" src="assets/images/js-icon.jpg" alt="Js" class="img-small border-black" (click)="c = !c">
-                  <div >
-                    <span class="nes-text is-dark" [ngClass]="{ 'is-success': c === true}" >JavaScript</span>
-                  </div>
-                </div>
-                <div class="d-flex flex-column" (click)="play_audio2('play', 1)">
-                  <img id="4" src="assets/images/magento.png" alt="Magento"class="img-small border-black" (click)="d = !d">
-                  <div >
-                    <span class="nes-text is-dark" [ngClass]="{ 'is-success': d === true}" >Magento</span>
-                  </div>
-                </div>
-
-                <div class="d-flex flex-column" (click)="play_audio2('play', 1)">
-                  <img id="6" src="assets/images/html-5.png" alt="html 5" class="img-small border-black" (click)="f = !f">
-                  <div >
-                    <span class="nes-text is-dark" [ngClass]="{ 'is-success': f === true}" >Html</span>
-                  </div>
-                </div>
-
-                <div class="d-flex flex-column" (click)="play_audio2('play', 1)">
-                  <img id="9" src="assets/images/angular.png" alt="Angular" class="img-small border-black" (click)="i = !i">
-                  <div >
-                    <span class="nes-text is-dark" [ngClass]="{ 'is-success': i === true}" >Angular</span>
-                  </div>
-                </div>
-
-                <div class="d-flex flex-column" (click)="play_audio2('play', 1)">
-                  <img id="11" src="assets/images/prestashop.png" alt="prestashop" class="img-small border-black" (click)="k = !k">
-                  <div>
-                    <span class="nes-text is-dark" [ngClass]="{ 'is-success': k === true}" >Prestashop</span>
-                  </div>
-                </div>
-                <div class="d-flex flex-column" (click)="play_audio2('play', 1)">
-                  <img id="12" src="assets/images/jquery.png" alt="vue" class="img-small border-black" (click)="l = !l">
-                  <div>
-                    <span class="nes-text is-dark" [ngClass]="{ 'is-success': l === true}" >Jquery</span>
-                  </div>
-                </div>
-              </div>
-        </section>
-        </div>
-
-        <div id="skill" class="pt-5 col-lg-10 m-auto pb-2 d-block d-lg-none">
-          <section class="nes-container with-title is-centered ">
-            <p class="title">Skills</p>
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img class="d-block w-100" src="assets/images/bootstrap.png" class="img-med" alt="First slide">
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block w-100" src="assets/images/angular.png" class="img-med" alt="Third slide">
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block w-100" src="assets/images/jquery.png" class="img-med" alt="Second slide">
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block w-100" src="assets/images/firebase.png" class="img-med" alt="Second slide">
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block w-100" src="assets/images/js-icon.jpg" class="img-med" alt="Third slide">
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block w-100" src="assets/images/magento.png" class="img-med" alt="Third slide">
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block w-100" src="assets/images/html-5.png" class="img-med" alt="Third slide">
-                </div>
-              </div>
-              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-        </section>
-        </div>
-
-        <!-- contancto -->
-        <div id="contacto" class="pt-5 col-lg-10 m-auto pb-5">
-          <section class="nes-container with-title is-centered ">
-            <p class="title">Contáctame</p>
-            <div class="d-flex justify-content-around align-items-center flex-wrap mb-3 mt-4">
-              <div class="mr-3">
-                <a href="mailto:joan162581@gmail.com"><i class="nes-icon gmail  is-large"></i></a>
-              </div>
-              <div class="mr-3">
-                <a href="https://twitter.com/LazoJoan" target="_blank"><i class="nes-icon twitter is-large"></i></a>
-              </div>
-              <div class="mr-3">
-                <a href="https://github.com/JoanLazo" target="_blank"><i class="nes-icon github is-large"></i></a>
-              </div>
-              <div class="mr-3">
-                <a href="https://www.linkedin.com/in/joan-lazo-morales/" target="_blank"><i class="nes-icon linkedin is-large"></i></a>
-              </div>
-              <div class="mr-3">
-                <a href="https://api.whatsapp.com/send?phone=+51997971032" target="_blank"><i class="nes-icon whatsapp  is-large"></i></a>
+          <div class="card mr-2 text-white bg-dark">
+            <img
+              src="./assets/images/lol.jpg"
+              style="height: 150px"
+              class="card-img-top"
+              alt="Lol"
+            />
+            <div class="card-body">
+              <h5 class="card-title text-center">Data Lovers</h5>
+              <p class="card-text">
+                Web que consume un api con el tema de League of Leagues, juego
+                de rol en equipo,donde los fans podra ver información sobre sus
+                heroes.
+              </p>
+              <div (click)="play_audio2('play', 1)">
+                <a
+                  href="https://joanlazo.github.io/lim-2018-11-bc-core-am-data-lovers/src/"
+                  target="_blank"
+                  style="font-size: 13px"
+                  ><i class="snes-jp-logo"></i> Ver Web</a
+                >
               </div>
             </div>
-          </section>
+          </div>
+          <div class="card text-white bg-dark">
+            <img
+              src="./assets/images/mommy.png"
+              style="height: 150px"
+              class="card-img-top"
+              alt="Mommys"
+            />
+            <div class="card-body">
+              <h5 class="card-title text-center">Mommy's Love</h5>
+              <p class="card-text">
+                Red social de madres primerizas, interactua, publica tus
+                experiencias, edita y reacciona con divertidos emoticones.
+              </p>
+              <div (click)="play_audio2('play', 1)">
+                <a
+                  href="https://joanlazo.github.io/LIM008-social-network/src/index.html"
+                  target="_blank"
+                  style="font-size: 13px"
+                  ><i class="snes-jp-logo"></i> Ver Web</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-
+      </section>
     </div>
 
-    <button type="button" id="scroll" class="nes-btn is-error scroll-btn active"  (click)="topFunction()"><span>&lt;</span></button>
+    <!-- skill -->
+    <div id="skill" class="pt-5 col-lg-10 m-auto pb-2 d-none d-lg-block">
+      <section class="nes-container with-title is-centered">
+        <p class="title">Skills</p>
+        <div
+          class="
+            d-flex
+            justify-content-center
+            align-items-center
+            flex-wrap
+            mb-5
+          "
+        >
+          <div class="d-flex flex-column" (click)="play_audio2('play', 1)">
+            <img
+              id="1"
+              src="./assets/images/bootstrap.png"
+              alt="Bootstrap"
+              class="img-small border-black"
+              (click)="primero = !primero"
+            />
+            <div>
+              <span
+                class="nes-text is-dark"
+                [ngClass]="{ 'is-success': primero === true }"
+                >Bootstrap</span
+              >
+            </div>
+          </div>
+          <div class="d-flex flex-column" (click)="play_audio2('play', 1)">
+            <img
+              id="2"
+              src="./assets/images/firebase.png"
+              alt="Firebase"
+              class="img-small border-black"
+              (click)="b = !b"
+            />
+            <div>
+              <span
+                class="nes-text is-dark"
+                [ngClass]="{ 'is-success': b === true }"
+                >Firebase</span
+              >
+            </div>
+          </div>
+          <div class="d-flex flex-column" (click)="play_audio2('play', 1)">
+            <img
+              id="3"
+              src="./assets/images/js-icon.jpg"
+              alt="Js"
+              class="img-small border-black"
+              (click)="c = !c"
+            />
+            <div>
+              <span
+                class="nes-text is-dark"
+                [ngClass]="{ 'is-success': c === true }"
+                >JavaScript</span
+              >
+            </div>
+          </div>
+          <div class="d-flex flex-column" (click)="play_audio2('play', 1)">
+            <img
+              id="4"
+              src="./assets/images/magento.png"
+              alt="Magento"
+              class="img-small border-black"
+              (click)="d = !d"
+            />
+            <div>
+              <span
+                class="nes-text is-dark"
+                [ngClass]="{ 'is-success': d === true }"
+                >Magento</span
+              >
+            </div>
+          </div>
 
+          <div class="d-flex flex-column" (click)="play_audio2('play', 1)">
+            <img
+              id="6"
+              src="./assets/images/html-5.png"
+              alt="html 5"
+              class="img-small border-black"
+              (click)="f = !f"
+            />
+            <div>
+              <span
+                class="nes-text is-dark"
+                [ngClass]="{ 'is-success': f === true }"
+                >Html</span
+              >
+            </div>
+          </div>
 
+          <div class="d-flex flex-column" (click)="play_audio2('play', 1)">
+            <img
+              id="9"
+              src="./assets/images/angular.png"
+              alt="Angular"
+              class="img-small border-black"
+              (click)="i = !i"
+            />
+            <div>
+              <span
+                class="nes-text is-dark"
+                [ngClass]="{ 'is-success': i === true }"
+                >Angular</span
+              >
+            </div>
+          </div>
+
+          <div class="d-flex flex-column" (click)="play_audio2('play', 1)">
+            <img
+              id="11"
+              src="./assets/images/prestashop.png"
+              alt="prestashop"
+              class="img-small border-black"
+              (click)="k = !k"
+            />
+            <div>
+              <span
+                class="nes-text is-dark"
+                [ngClass]="{ 'is-success': k === true }"
+                >Prestashop</span
+              >
+            </div>
+          </div>
+          <div class="d-flex flex-column" (click)="play_audio2('play', 1)">
+            <img
+              id="12"
+              src="./assets/images/jquery.png"
+              alt="vue"
+              class="img-small border-black"
+              (click)="l = !l"
+            />
+            <div>
+              <span
+                class="nes-text is-dark"
+                [ngClass]="{ 'is-success': l === true }"
+                >Jquery</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div id="skill" class="pt-5 col-lg-10 m-auto pb-2 d-block d-lg-none">
+      <section class="nes-container with-title is-centered">
+        <p class="title">Skills</p>
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <ol class="carousel-indicators">
+            <li
+              data-target="#carouselExampleIndicators"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                class="d-block w-100"
+                src="./assets/images/bootstrap.png"
+                class="img-med"
+                alt="First slide"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                class="d-block w-100"
+                src="./assets/images/angular.png"
+                class="img-med"
+                alt="Third slide"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                class="d-block w-100"
+                src="./assets/images/jquery.png"
+                class="img-med"
+                alt="Second slide"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                class="d-block w-100"
+                src="./assets/images/firebase.png"
+                class="img-med"
+                alt="Second slide"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                class="d-block w-100"
+                src="./assets/images/js-icon.jpg"
+                class="img-med"
+                alt="Third slide"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                class="d-block w-100"
+                src="./assets/images/magento.png"
+                class="img-med"
+                alt="Third slide"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                class="d-block w-100"
+                src="./assets/images/html-5.png"
+                class="img-med"
+                alt="Third slide"
+              />
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <!-- contancto -->
+    <div id="contacto" class="pt-5 col-lg-10 m-auto pb-5">
+      <section class="nes-container with-title is-centered">
+        <p class="title">Contáctame</p>
+        <div
+          class="
+            d-flex
+            justify-content-around
+            align-items-center
+            flex-wrap
+            mb-3
+            mt-4
+          "
+        >
+          <div class="mr-3">
+            <a href="mailto:joan162581@gmail.com"
+              ><i class="nes-icon gmail is-large"></i
+            ></a>
+          </div>
+          <div class="mr-3">
+            <a href="https://twitter.com/LazoJoan" target="_blank"
+              ><i class="nes-icon twitter is-large"></i
+            ></a>
+          </div>
+          <div class="mr-3">
+            <a href="https://github.com/JoanLazo" target="_blank"
+              ><i class="nes-icon github is-large"></i
+            ></a>
+          </div>
+          <div class="mr-3">
+            <a
+              href="https://www.linkedin.com/in/joan-lazo-morales/"
+              target="_blank"
+              ><i class="nes-icon linkedin is-large"></i
+            ></a>
+          </div>
+          <div class="mr-3">
+            <a
+              href="https://api.whatsapp.com/send?phone=+51997971032"
+              target="_blank"
+              ><i class="nes-icon whatsapp is-large"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+
+<button
+  type="button"
+  id="scroll"
+  class="nes-btn is-error scroll-btn active"
+  (click)="topFunction()"
+>
+  <span>&lt;</span>
+</button>
